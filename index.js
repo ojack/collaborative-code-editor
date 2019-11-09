@@ -32,7 +32,7 @@ io.on('connection', client => {
 
     // send client its id and anchor and names obj
     client.emit('initialize', { anchors, names })
-    
+
     client.on('anchor-update', msg => {
         // set anchors[id]
         anchors[id] = msg
@@ -54,7 +54,7 @@ io.on('connection', client => {
 })
 
 // Start Server
-const port = 80
+const port = 8000
 server.listen(port)
 console.log(`listening on port ${port}`)
 
